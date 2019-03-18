@@ -26,4 +26,4 @@ The parser is generated with Lemon
 ```
 Lemon arcangel-parser.y
 ```
-This last command depends on you having the Lemon and the lempar.c template.
+This last command depends on you having Lemon and the lempar.c template.
