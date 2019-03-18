@@ -168,6 +168,7 @@ void progFnEnd(int endLbl, char** ip) {
 }
 
 void progIfStart(int elseLbl, char** ip) {
+    progPop(ip);
     progOp(Operation_Flow_JMPZ, ip);
     progInt(elseLbl, ip);
 }
@@ -189,6 +190,7 @@ void progWhileStart(int startLbl, char** ip) {
 }
 
 void progWhileCond(int endLbl, char** ip) {
+    progPop(ip);
     progOp(Operation_Flow_JMPZ, ip);
     progInt(endLbl, ip);
 }
@@ -203,6 +205,7 @@ void progRepeatStart(int startLbl, char** ip) {
 }
 
 void progRepeatEnd(int startLbl, int endLbl, char** ip) {
+    progPop(ip);
     progOp(Operation_Flow_JMPZ, ip);
     progInt(startLbl, ip);
     progLbl(endLbl, ip);

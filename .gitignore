@@ -5,3 +5,8 @@ bin/
 obj/
 arcangel.depend
 arcangelc.depend
+a.out
+arcangel.layout
+arcangelc.layout
+arcangelhex.depend
+main.arc

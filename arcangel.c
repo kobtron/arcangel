@@ -9,7 +9,7 @@ char* fileToBuff(char* file) {
     if (file == 0) {
         file = "a.out";
     }
-    FILE *fp = fopen(file, "r");
+    FILE *fp = fopen(file, "rb");
     fseek(fp, 0L, SEEK_END);
     long bufsize = ftell(fp);
     source = malloc(sizeof(char) * (bufsize + 1));
