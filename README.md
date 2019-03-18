@@ -13,7 +13,7 @@ arcangel a.out
 ```
 ## Using the disassembler
 ```
-gcc arcangel-vm.c arcangelhex.c arcangelhex
+gcc arcangel-vm.c arcangelhex.c -o arcangelhex
 arcangelhex a.out
 ```
 ## Regenerating the lexer and parser
