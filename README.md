@@ -1,7 +1,7 @@
 # arcangel
 Tiny language, compiler and virtual machine
 
-## Reenerating the lexer and parser
+## Regenerating the lexer and parser
 The lexer is generated with flex
 ```
 flex arcangel-lexer.l
