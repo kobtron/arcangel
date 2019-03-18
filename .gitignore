@@ -3,4 +3,5 @@ ArcangelVM.depend
 ArcangelVM.layout
 bin/
 obj/
-lempar.c
+arcangel.depend
+arcangelc.depend

@@ -44,14 +44,8 @@ int main(int argc, char** argv) {
     char* program = arcangel_compile(source, &size);
     free(source);
     if (program) {
-        arcangel_State* A = arcangel_State_load(program);
-        if (arcangel_State_hasCallback(A)) {
-            arcangel_Reference* r = arcangel_State_callback(A);
-            if (r != 0) {
-                free(r);
-            }
-        }
-        arcangel_State_delete(A);
+        FILE *my_file = fopen("a.out", "wb");
+        fwrite(program, sizeof(char), size, my_file);
     }
     return 0;
 }

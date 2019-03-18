@@ -83,6 +83,6 @@ extern char* currStr;
 extern int parsSize;
 extern int argsSize;
 
-char* arcangel_compile(char* source);
+char* arcangel_compile(char* source, int* size);
 
 #endif

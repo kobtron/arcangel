@@ -322,12 +322,9 @@ int parsSize;
 int argsSize;
 
 #include "arcangel-lexer.h"
-/*
-#include "lex.yy.c"
-*/
 
-char* arcangel_compile(char* source) {
-    char* program = calloc(4000, sizeof(char));
+char* arcangel_compile(char* source, int* size) {
+    char* program = calloc(4 * 1024 * 1024, sizeof(char));
     char* programPtr = program;
     ip = &programPtr;
     char* sourcePtr = source;
@@ -358,6 +355,7 @@ char* arcangel_compile(char* source) {
     arcangel_Stack_delete(loopEndStack);
     arcangel_Stack_delete(entriesStack);
     if (!gError) {
+        *size = programPtr - program;
         return program;
     }
     free(program);
