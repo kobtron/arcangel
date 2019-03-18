@@ -11,6 +11,11 @@ gcc arcangel-vm.c arcangel.c -o arcangel
 arcangelc examples/hello.arc
 arcangel a.out
 ```
+## Using the disassembler
+```
+gcc arcangel-vm.c arcangelhex.c arcangelhex
+arcangelhex a.out
+```
 ## Regenerating the lexer and parser
 The lexer is generated with flex
 ```
