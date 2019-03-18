@@ -11,3 +11,4 @@ The parser is generated with Lemon
 ```
 Lemon.exe arcangel-parser.y
 ```
+This last command depends on you having the lempar.c template.
