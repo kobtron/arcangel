@@ -1,6 +1,16 @@
 # arcangel
 Tiny language, compiler and virtual machine
 
+## Generating the compiler and the virtual machine
+```
+gcc arcangel-compiler.c arcangel-parser.c arcangel-vm.c arcangelc.c -o arcangelc
+gcc arcangel-vm.c arcangel.c -o arcangel
+```
+## Compiling and running an example
+```
+arcangelc examples/hello.arc
+arcangel a.out
+```
 ## Regenerating the lexer and parser
 The lexer is generated with flex
 ```
