@@ -31,7 +31,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
+		<Unit filename="arcangel-vm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arcangel-vm.h" />
+		<Unit filename="arcangelhex.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
