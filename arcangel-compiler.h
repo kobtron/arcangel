@@ -55,6 +55,7 @@ void progRepeatEnd(int startLbl, int endLbl, char** ip);
 void progRepeatStart(int startLbl, char** ip);
 void progGoto(int lbl, char** ip);
 void progFnEnd(int endLbl, char** ip);
+void progRet(char** ip);
 void progConstInt(int value, char** ip);
 void progPush(char** ip);
 void progFnStart(int lbl, int endLbl, int argsSize, char** ip);

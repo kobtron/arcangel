@@ -69,6 +69,7 @@
 "until" { col += (int) strlen(yytext); return UNTIL; }
 "break" { col += (int) strlen(yytext); return BREAK; }
 "continue" { col += (int) strlen(yytext); return CONTINUE; }
+"return" { col += (int) strlen(yytext); return RETURN; }
 "int" { col += (int) strlen(yytext); return INTCAST; }
 "float" { col += (int) strlen(yytext); return FLOATCAST; }
 "new" { col += (int) strlen(yytext); return NEW; }

@@ -97,7 +97,7 @@ typedef enum Operation {
     Operation_SYSCALL,
 
     /* callback = IP (loading phase) */
-    Operation_CALLBACK,
+    Operation_Load_CALLBACK,
 
     /* globalHeap = heapStack.get(0) */
     /* A = globalHeap[i] */

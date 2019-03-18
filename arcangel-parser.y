@@ -223,6 +223,10 @@ stmt ::= CONTINUE. {
     }
 }
 
+stmt ::= RETURN expr. {
+    progRet(ip);
+}
+
 parsList ::= .
 parsList ::= par parsListTail.
 parsListTail ::= .
@@ -247,7 +251,7 @@ fnStart ::= fnStartKw. {
     arcangel_Stack_push(labelStack, (void*)lbl);
     labelCount += 2;
     if (isCallback) {
-        progOp(Operation_CALLBACK, ip);
+        progOp(Operation_Load_CALLBACK, ip);
     }
     Entries* entries = calloc(1, sizeof(Entries));
     arcangel_Stack_push(entriesStack, entries);

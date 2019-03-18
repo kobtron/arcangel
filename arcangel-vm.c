@@ -809,7 +809,7 @@ void execute(State* state, char* programPtr) {
                 arcangel_sysCall(stack);
             }
             break;
-        case Operation_CALLBACK:
+        case Operation_Load_CALLBACK:
             break;
         }
     }
@@ -864,7 +864,7 @@ State* arcangel_State_load(char* program) {
                 c = readChar(&programPtr);
             } while (c != '\0');
             break;
-        case Operation_CALLBACK:
+        case Operation_Load_CALLBACK:
             state->callback = programPtr;
             break;
         default:
