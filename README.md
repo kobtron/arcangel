@@ -8,13 +8,13 @@ gcc arcangel-vm.c arcangel.c -o arcangel
 ```
 ## Compiling and running an example
 ```
-arcangelc examples/hello.arc
-arcangel a.out
+./arcangelc examples/hello.arc
+./arcangel a.out
 ```
 ## Using the disassembler
 ```
 gcc arcangel-vm.c arcangelhex.c -o arcangelhex
-arcangelhex a.out
+./arcangelhex a.out
 ```
 ## Regenerating the lexer and parser
 The lexer is generated with flex
