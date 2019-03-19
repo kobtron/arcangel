@@ -6,9 +6,9 @@ void arcangel_setPrintf(int (*f)(const char*, ...)) {
     arcangel_printf = f;
 }
 
-void* (*arcangel_calloc)(first, second) = 0;
+void* (*arcangel_calloc)(size_t first, size_t second) = 0;
 
-void arcangel_setCalloc(void* (*f)(first, second)) {
+void arcangel_setCalloc(void* (*f)(size_t first, size_t second)) {
     arcangel_calloc = f;
 }
 

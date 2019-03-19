@@ -1,6 +1,8 @@
 #ifndef ARCANGEL_VM_H
 #define ARCANGEL_VM_H
 
+#include <stddef.h>
+
 /* Operations on Arcangel VM.
    Arcangel VM has 2 registers (A and B), a label hash table (for addresses) and 3 stacks:
    - value stack (AKA stack, for arithmetic)
@@ -118,7 +120,7 @@ typedef enum ReferenceType {
 } ReferenceType;
 
 void arcangel_setPrintf(int (*f)(const char*, ...));
-void arcangel_setCalloc(void* (*f)(first, second));
+void arcangel_setCalloc(void* (*f)(size_t first, size_t second));
 void arcangel_setFree(void (*f)(void*));
 typedef struct arcangel_Reference arcangel_Reference;
 typedef struct arcangel_Stack arcangel_Stack;
